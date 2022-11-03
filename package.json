@@ -1,0 +1,17 @@
+{
+  "name": "opening-times",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "author": "Claire Parker-Jones",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "mocha": "^10.1.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  }
+}
