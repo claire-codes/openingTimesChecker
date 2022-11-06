@@ -21,7 +21,7 @@ let timeChecker = function (
   return false;
 };
 
-exports.openingTimeChecker = function(day, time = [0,0,0], storeObject) {
+let storeOpeningTimeChecker = function(day, time = [0,0,0], storeObject) {
     let times = storeObject.openingTimes;
     if (times) {
         for (let i = 0; i < times.length; ++i) {
@@ -33,4 +33,19 @@ exports.openingTimeChecker = function(day, time = [0,0,0], storeObject) {
     return false;
 }
 
+let whichStoresAreOpen = function(day, time, storesObject) {
+    let stores = storesObject.stores;
+    let openStores = [];
+    if (stores) {
+        for (let i = 0; i < stores.length; i++) {
+            if (storeOpeningTimeChecker(day, time, stores[i])) {
+                openStores.push(stores[i].name);
+            }
+        }
+    }
+    return openStores;
+}
+
 exports.timeChecker = timeChecker;
+exports.storeOpeningTimeChecker = storeOpeningTimeChecker;
+exports.whichStoresAreOpen = whichStoresAreOpen;

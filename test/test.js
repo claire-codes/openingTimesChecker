@@ -1,6 +1,7 @@
 var expect = require("chai").expect;
 var app = require("../src/app");
 var storeObject = require("../data/test/storeTimes.json");
+var storesObject = require("../data/test/stores.json");
 
 describe("Time Checker", function () {
   describe("checks a time is between a start and end time, good user input", function () {
@@ -34,10 +35,18 @@ describe("Time Checker", function () {
 
 describe("storeOpeningTimeChecker", function () {
   it("says whether the store is open at a certain time, true", function () {
-    expect(app.openingTimeChecker("Monday", [16, 0, 0], storeObject)).to.be.true;
+    expect(app.storeOpeningTimeChecker("Monday", [16, 0, 0], storeObject)).to.be
+      .true;
   });
 
   it("says whether the store is open at a certain time, false", function () {
-    expect(app.openingTimeChecker("Monday", [22, 0, 0], storeObject)).to.be.false;
+    expect(app.storeOpeningTimeChecker("Monday", [22, 0, 0], storeObject)).to.be
+      .false;
   });
 });
+
+describe("checking multiple stores and finding which ones are open", function() {
+    it('returns an array of stores', function() {
+        expect(app.whichStoresAreOpen("Monday", [16, 0, 0], storesObject)).to.eql(['Asda', 'Morrisons']);
+    })
+})
