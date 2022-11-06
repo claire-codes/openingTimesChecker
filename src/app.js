@@ -25,7 +25,6 @@ exports.openingTimeChecker = function(day, time = [0,0,0], storeObject) {
     let times = storeObject.openingTimes;
     if (times) {
         for (let i = 0; i < times.length; ++i) {
-          console.log(times[i].day === day);
           if (times[i].day === day) {
             return timeChecker(time, times[i].startTime, times[i].endTime);
           }
