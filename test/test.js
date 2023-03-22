@@ -92,5 +92,11 @@ describe("storeOpeningTimeChecker", function () {
                 checker.whichStoresAreOpen("Monday", [16, 0, 0], storesObject)
             ).to.eql(["Asda", "Morrisons"]);
         });
+        
+        it("returns an empty array of stores if none open", function () {
+            expect(
+                checker.whichStoresAreOpen("Monday", [1, 0, 0], storesObject)
+            ).to.eql([]);
+        });
     });
 });
