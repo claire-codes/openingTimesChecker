@@ -1,5 +1,5 @@
 var expect = require("chai").expect;
-var checker = require("../src/checker");
+var checker = require("../src-original/checker");
 var storeObject = require("../data/test/storeTimes.json");
 var storesObject = require("../data/test/stores.json");
 
