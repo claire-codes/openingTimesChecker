@@ -1,76 +1,52 @@
 ---
 // Component Imports
-import Store from '../components/Store';
+import Store from "../components/Store";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 
 const testStore = {
-            "name": "Asda",
-            "openingTimes": [
-                {
-                    "day": "Monday",
-                    "startTime": [
-                        9,
-                        0,
-                        0
-                    ],
-                    "endTime": [
-                        17,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "day": "Tuesday",
-                    "startTime": [
-                        9,
-                        0,
-                        0
-                    ],
-                    "endTime": [
-                        17,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "day": "Wednesday",
-                    "startTime": [
-                        10,
-                        0,
-                        0
-                    ],
-                    "endTime": [
-                        4,
-                        0,
-                        0
-                    ]
-                }
-            ]
-        };
+    name: "Asda",
+    openingTimes: [
+        {
+            day: "Monday",
+            startTime: [9, 0, 0],
+            endTime: [17, 0, 0],
+        },
+        {
+            day: "Tuesday",
+            startTime: [9, 0, 0],
+            endTime: [17, 0, 0],
+        },
+        {
+            day: "Wednesday",
+            startTime: [10, 0, 0],
+            endTime: [4, 0, 0],
+        },
+    ],
+};
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<style>
-			html,
-			body {
-				font-family: system-ui;
-				margin: 0;
-			}
-			body {
-				padding: 2rem;
-			}
-		</style>
-	</head>
-	<body>
-		<main>
-			<Store data={testStore} />
-		</main>
-	</body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <style>
+            html,
+            body {
+                font-family: system-ui;
+                margin: 0;
+            }
+            body {
+                padding: 2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <Store data={testStore} />
+        </main>
+    </body>
 </html>
