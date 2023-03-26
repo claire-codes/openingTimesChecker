@@ -1,30 +1,13 @@
 ---
 // Component Imports
 import Store from "../components/Store";
+import StoreList from "../components/StoreList";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 
-const testStore = {
-    name: "Asda",
-    openingTimes: [
-        {
-            day: "Monday",
-            startTime: [9, 0, 0],
-            endTime: [17, 0, 0],
-        },
-        {
-            day: "Tuesday",
-            startTime: [9, 0, 0],
-            endTime: [17, 0, 0],
-        },
-        {
-            day: "Wednesday",
-            startTime: [10, 0, 0],
-            endTime: [4, 0, 0],
-        },
-    ],
-};
+import json from '../../public/test/stores.json';
+
 ---
 
 <html lang="en">
@@ -46,7 +29,7 @@ const testStore = {
     </head>
     <body>
         <main>
-            <Store data={testStore} />
+            <StoreList data={json} />
         </main>
     </body>
 </html>
