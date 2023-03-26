@@ -16,11 +16,11 @@ export default function Store({ data }) {
 			<div class="store">
 				<h2>Hello {data.name}</h2>
 				{data.openingTimes.map(d =>
-				(<div>
-					<div>{d.day}</div>
-					<div>Opening Time: {outputTime(d.startTime)}</div>
-					<div>Closing Time: {outputTime(d.endTime)}</div>
-				</div>))
+					(<div>
+						<div>{d.day}</div>
+						<div>Opening Time: {outputTime(d.startTime)}</div>
+						<div>Closing Time: {outputTime(d.endTime)}</div>
+					</div>))
 				}
 			</div>
 		</>
