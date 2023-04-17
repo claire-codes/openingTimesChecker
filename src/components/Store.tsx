@@ -10,7 +10,6 @@ function outputTime(time) {
 export default function Store({ data }) {
 	console.log('hello', data.name);
 
-
 	return (
 		<>
 			<div class="store">
