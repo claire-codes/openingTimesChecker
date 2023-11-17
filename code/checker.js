@@ -46,6 +46,7 @@ let whichStoresAreOpen = function (day, time, storesObject) {
     return openStores;
 };
 
-exports.timeChecker = timeChecker;
-exports.storeOpeningTimeChecker = storeOpeningTimeChecker;
-exports.whichStoresAreOpen = whichStoresAreOpen;
+export { timeChecker, storeOpeningTimeChecker, whichStoresAreOpen };
+// exports.timeChecker = timeChecker;
+// exports.storeOpeningTimeChecker = storeOpeningTimeChecker;
+// exports.whichStoresAreOpen = whichStoresAreOpen;
