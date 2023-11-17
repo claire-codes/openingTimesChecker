@@ -1,4 +1,9 @@
 var expect = require("chai").expect;
+console.log('me');
+// import { timeChecker, storeOpeningTimeChecker, whichStoresAreOpen} from "../src-original/checker.js";
+console.log('too');
+// import storeObject from "../data/test/storeTimes.json" assert { type: "json" };
+// import storesObject from "../data/test/stores.json" assert { type: "json" };
 var checker = require("../src-original/checker");
 var storeObject = require("../data/test/storeTimes.json");
 var storesObject = require("../data/test/stores.json");
@@ -92,7 +97,7 @@ describe("storeOpeningTimeChecker", function () {
                 checker.whichStoresAreOpen("Monday", [16, 0, 0], storesObject)
             ).to.eql(["Asda", "Morrisons"]);
         });
-        
+
         it("returns an empty array of stores if none open", function () {
             expect(
                 checker.whichStoresAreOpen("Monday", [1, 0, 0], storesObject)
