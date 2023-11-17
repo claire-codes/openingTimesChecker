@@ -1,12 +1,11 @@
 ---
-// Component Imports
-import Store from "../components/Store";
-import StoreList from "../components/StoreList";
+import SvelteWorld from "../components/SvelteWorld.svelte";
 
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
+// // Full Astro Component Syntax:
+// // https://docs.astro.build/core-concepts/astro-components/
 
 import json from '../../public/test/stores.json';
+import StoreList from "../components/StoreList.svelte";
 
 ---
 
@@ -29,7 +28,11 @@ import json from '../../public/test/stores.json';
     </head>
     <body>
         <main>
-            <StoreList data={json} />
+            <!-- <DayOfTheWeekInput /> -->
+            <!-- <StoreList data={json} /> -->
+            <h1>Hello World</h1>
+            <SvelteWorld />
+            <StoreList />
         </main>
     </body>
 </html>

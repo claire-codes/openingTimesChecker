@@ -1,4 +1,3 @@
-console.log("Hello World");
 let timeChecker = function (
     currentTime = [8, 0, 0],
     startTime = [9, 0, 0],
