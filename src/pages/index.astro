@@ -3,6 +3,8 @@
 // // https://docs.astro.build/core-concepts/astro-components/
 
 import json from '../../public/data/stores.json';
+import CartTest from '../components/CartTest.svelte';
+import CartToggle from '../components/CartToggle.svelte';
 import StoreList from "../components/StoreList.svelte";
 
 ---
@@ -30,6 +32,8 @@ import StoreList from "../components/StoreList.svelte";
             <!-- <StoreList data={json} /> -->
             <h1>Hello World</h1>
             <StoreList />
+            <CartTest client:visible />
+            <CartToggle client:visible />
         </main>
     </body>
 </html>
