@@ -1,10 +1,7 @@
 ---
-// // Full Astro Component Syntax:
-// // https://docs.astro.build/core-concepts/astro-components/
-
-import json from '../../public/data/stores.json';
 import CartTest from '../components/CartTest.svelte';
 import CartToggle from '../components/CartToggle.svelte';
+import DayPicker from '../components/DayPicker.svelte';
 import StoreList from "../components/StoreList.svelte";
 
 ---
@@ -28,10 +25,8 @@ import StoreList from "../components/StoreList.svelte";
     </head>
     <body>
         <main>
-            <!-- <DayOfTheWeekInput /> -->
-            <!-- <StoreList data={json} /> -->
-            <h1>Hello World</h1>
-            <StoreList />
+            <DayPicker client:visible />
+            <StoreList client:load />
             <CartTest client:visible />
             <CartToggle client:visible />
         </main>
