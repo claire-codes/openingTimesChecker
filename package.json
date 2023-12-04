@@ -1,32 +1,33 @@
 {
-  "name": "opening-times",
-  "type": "module",
-  "version": "1.0.0",
-  "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
-  "author": "Claire Parker-Jones",
-  "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "chai": "^4.3.6",
-    "mocha": "^10.1.0",
-    "prettier": "^2.7.1"
-  },
-  "scripts": {
-    "test": "mocha",
-    "prettier": "./node_modules/.bin/prettier --write '**/*.js'",
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/svelte": "^4.0.4",
-    "astro": "^3.5.5",
-    "nanostores": "^0.9.5",
-    "svelte": "^4.2.3"
-  }
+    "name": "opening-times",
+    "type": "module",
+    "version": "1.0.0",
+    "main": "index.js",
+    "directories": {
+        "test": "test"
+    },
+    "author": "Claire Parker-Jones",
+    "license": "ISC",
+    "description": "",
+    "devDependencies": {
+        "chai": "^4.3.6",
+        "mocha": "^10.1.0",
+        "prettier": "^3.1.0",
+        "prettier-plugin-svelte": "^3.1.2"
+    },
+    "scripts": {
+        "test": "mocha",
+        "prettier": "./node_modules/.bin/prettier --write '{src,data,public}/**/*.{js,json,svelte,ts,tsx}'",
+        "dev": "astro dev",
+        "start": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview",
+        "astro": "astro"
+    },
+    "dependencies": {
+        "@astrojs/svelte": "^4.0.4",
+        "astro": "^3.5.5",
+        "nanostores": "^0.9.5",
+        "svelte": "^4.2.3"
+    }
 }

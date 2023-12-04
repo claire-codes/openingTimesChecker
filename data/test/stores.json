@@ -5,42 +5,18 @@
             "openingTimes": [
                 {
                     "day": "Monday",
-                    "startTime": [
-                        9,
-                        0,
-                        0
-                    ],
-                    "endTime": [
-                        17,
-                        0,
-                        0
-                    ]
+                    "startTime": [9, 0, 0],
+                    "endTime": [17, 0, 0]
                 },
                 {
                     "day": "Tuesday",
-                    "startTime": [
-                        9,
-                        0,
-                        0
-                    ],
-                    "endTime": [
-                        17,
-                        0,
-                        0
-                    ]
+                    "startTime": [9, 0, 0],
+                    "endTime": [17, 0, 0]
                 },
                 {
                     "day": "Wednesday",
-                    "startTime": [
-                        10,
-                        0,
-                        0
-                    ],
-                    "endTime": [
-                        16,
-                        0,
-                        0
-                    ]
+                    "startTime": [10, 0, 0],
+                    "endTime": [16, 0, 0]
                 }
             ]
         },
@@ -49,42 +25,18 @@
             "openingTimes": [
                 {
                     "day": "Monday",
-                    "startTime": [
-                        9,
-                        0,
-                        0
-                    ],
-                    "endTime": [
-                        17,
-                        0,
-                        0
-                    ]
+                    "startTime": [9, 0, 0],
+                    "endTime": [17, 0, 0]
                 },
                 {
                     "day": "Tuesday",
-                    "startTime": [
-                        9,
-                        0,
-                        0
-                    ],
-                    "endTime": [
-                        17,
-                        0,
-                        0
-                    ]
+                    "startTime": [9, 0, 0],
+                    "endTime": [17, 0, 0]
                 },
                 {
                     "day": "Wednesday",
-                    "startTime": [
-                        10,
-                        0,
-                        0
-                    ],
-                    "endTime": [
-                        16,
-                        0,
-                        0
-                    ]
+                    "startTime": [10, 0, 0],
+                    "endTime": [16, 0, 0]
                 }
             ]
         }

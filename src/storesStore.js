@@ -1,3 +1,3 @@
-import { atom } from 'nanostores';
+import { atom } from "nanostores";
 
-export const dayOfTheWeek = atom('none');
+export const dayOfTheWeek = atom("none");
