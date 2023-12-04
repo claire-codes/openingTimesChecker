@@ -3,6 +3,7 @@
 </script>
 
 <div>
+    <h3>Choose a day</h3>
     {#each DAYS as day}
         <input
             type="radio"

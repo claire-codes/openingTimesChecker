@@ -1,8 +1,7 @@
 ---
-import CartTest from '../components/CartTest.svelte';
-import CartToggle from '../components/CartToggle.svelte';
 import DayPicker from '../components/DayPicker.svelte';
 import StoreList from "../components/StoreList.svelte";
+import TimePicker from '../components/TimePicker.svelte';
 
 ---
 
@@ -26,6 +25,7 @@ import StoreList from "../components/StoreList.svelte";
     <body>
         <main>
             <DayPicker client:visible />
+            <TimePicker client:visible />
             <StoreList client:load />
         </main>
     </body>
