@@ -1,10 +1,6 @@
 import { atom } from "nanostores";
 
-export const selectedDay = atom("Tuesday");
-export const DAYS = ["Monday", "Tuesday", "Wednesday"];
-
-// Store selected day here
+export const selectedDay = atom("All");
+export const DAYS = ["All", "Monday", "Tuesday", "Wednesday"];
 
 // Store object of stores here (or import JSON in)
-
-// Update selected day using a component
