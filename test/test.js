@@ -1,15 +1,11 @@
-// var expect = require("chai").expect;
 import { expect } from "chai";
 import {
     timeChecker,
     storeOpeningTimeChecker,
     whichStoresAreOpen,
 } from "../code/checker.js";
-import storeObject from "../data/test/storeTimes.json" assert { type: "json" };
-import storesObject from "../data/test/stores.json" assert { type: "json" };
-// import checker from "../code/checker.js";
-// var storeObject = require("../data/test/storeTimes.json");
-// var storesObject = require("../data/test/stores.json");
+import storeObject from "./data/storeTimes.json" assert { type: "json" };
+import storesObject from "./data/stores.json" assert { type: "json" };
 
 describe("Time Checker", function () {
     describe("checks a time is between a start and end time, good user input", function () {

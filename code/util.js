@@ -13,5 +13,4 @@ let zeroPad = function (num) {
     // TODO tests for this
 };
 
-// exports.prettyPrintTime = prettyPrintTime;
 export { prettyPrintTime };

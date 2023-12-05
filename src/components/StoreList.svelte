@@ -1,5 +1,5 @@
 <script>
-    import storeObject from "../../data/test/stores.json";
+    import storeObject from "../data/stores.json";
     import { prettyPrintTime } from "../../code/util";
     import { selectedDay } from "../dataStore";
     import { selectedTime } from "../dataStore";

@@ -1,5 +1,3 @@
-// var expect = require("chai").expect;
-// var util = require("../code/util");
 import { expect } from "chai";
 import { prettyPrintTime } from "../code/util.js";
 
