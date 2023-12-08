@@ -1,9 +1,28 @@
 <script>
     import storeObject from "../data/stores.json";
     import { prettyPrintTime } from "../../code/util";
-    import { selectedDay } from "../dataStore";
+    import { selectedDay, DAYS, DAYS_OF_THE_WEEK } from "../dataStore";
     import { selectedTime } from "../dataStore";
     import { timeChecker } from "../../code/checker";
+    import DayDisplay from "./DayDisplay.svelte";
+    console.log(storeObject.stores.length);
+
+    // Data formatting stuff, probably better somewhere else
+    // let formattedStores = storeObject.stores.each((store) => {
+    //     let tmpOpeningTimes = DAYS_OF_THE_WEEK.each((day) => {
+    //         if (store.openingTimes.find((value) => value.day === day)) {
+    //             return {...store.openingTimes, message: "Open"}
+    //         } else {
+    //             return {message: "Closed"};
+    //         }
+    //     })
+    //     return {
+    //         "name": store.name,
+    //         "openingTimes": tmpOpeningTimes
+    //     }
+    // })
+    // console.log(formattedStores)
+    // End of data formatting
 </script>
 
 <div>You have picked day: {$selectedDay}</div>
@@ -11,13 +30,13 @@
 
 {#each storeObject.stores as store}
     <h2>{store.name}</h2>
-    {#each store.openingTimes as days}
-        {#if $selectedDay === "All" || days.day.toLowerCase() === $selectedDay.toLowerCase()}
-            {#if $selectedTime === "All" || timeChecker([$selectedTime, 0, 0], days.startTime, days.endTime)}
+    <!-- {#each store.openingTimes as days} -->
+    {#each DAYS_OF_THE_WEEK as day}
+        {@const thisDay = store.openingTimes.find((x) => x.day === day)}
+        {#if $selectedDay === "All" || thisDay.day.toLowerCase() === $selectedDay.toLowerCase()}
+            {#if $selectedTime === "All" || timeChecker([$selectedTime, 0], thisDay.startTime, thisDay.endTime)}
                 <div>
-                    {days.day}: {prettyPrintTime(days.startTime)} - {prettyPrintTime(
-                        days.endTime
-                    )}
+                    <DayDisplay day={day} thisDay={thisDay} />
                 </div>
             {/if}
         {/if}
