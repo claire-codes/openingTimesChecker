@@ -1,15 +1,15 @@
 let timeChecker = function (
-    currentTime = [8, 0, 0],
-    startTime = [9, 0, 0],
-    endTime = [17, 0, 0]
+    currentTime = [8, 0],
+    startTime = [9, 0],
+    endTime = [17, 0]
 ) {
     let currentDate = new Date();
     let startDate = new Date();
     let endDate = new Date();
 
-    startDate.setHours(startTime[0], startTime[1], startTime[2]);
-    endDate.setHours(endTime[0], endTime[1], endTime[2]);
-    currentDate.setHours(currentTime[0], currentTime[1], currentTime[2]);
+    startDate.setHours(startTime[0], startTime[1], 0);
+    endDate.setHours(endTime[0], endTime[1], 0);
+    currentDate.setHours(currentTime[0], currentTime[1], 0);
 
     if (currentDate >= startDate && currentDate <= endDate) {
         return true;
@@ -17,7 +17,7 @@ let timeChecker = function (
     return false;
 };
 
-let storeOpeningTimeChecker = function (day, time = [0, 0, 0], storeObject) {
+let storeOpeningTimeChecker = function (day, time = [0, 0], storeObject) {
     let storeTimes = storeObject.openingTimes;
     if (storeTimes) {
         for (let i = 0; i < storeTimes.length; ++i) {
