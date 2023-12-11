@@ -23,6 +23,29 @@
     // })
     // console.log(formattedStores)
     // End of data formatting
+
+    function showDisplayDay(selectedDay, day) {
+        if (selectedDay === "All") {
+            return true;
+        } else if (day === selectedDay) {
+            return true;
+        }
+        return false;
+    }
+
+    function showTime(selectedTime, thisDay) {
+        if (selectedTime === "All") {
+            return true;
+        } else if (!thisDay) {
+            // want to refactor this when data is better
+            return false;
+        } else if (
+            timeChecker([selectedTime, 0], thisDay.startTime, thisDay.endTime)
+        ) {
+            return true;
+        }
+        return false;
+    }
 </script>
 
 <div>You have picked day: {$selectedDay}</div>
@@ -33,10 +56,10 @@
     <!-- {#each store.openingTimes as days} -->
     {#each DAYS_OF_THE_WEEK as day}
         {@const thisDay = store.openingTimes.find((x) => x.day === day)}
-        {#if $selectedDay === "All" || thisDay.day.toLowerCase() === $selectedDay.toLowerCase()}
-            {#if $selectedTime === "All" || timeChecker([$selectedTime, 0], thisDay.startTime, thisDay.endTime)}
+        {#if showDisplayDay($selectedDay, day)}
+            {#if showTime($selectedTime, thisDay)}
                 <div>
-                    <DayDisplay day={day} thisDay={thisDay} />
+                    <DayDisplay {day} {thisDay} />
                 </div>
             {/if}
         {/if}
