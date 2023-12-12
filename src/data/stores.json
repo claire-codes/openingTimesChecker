@@ -21,7 +21,42 @@
             ]
         },
         {
-            "name": "Morrisons",
+            "name": "Connah's Quay Library",
+            "openingTimes": [
+                {
+                    "day": "Monday",
+                    "startTime": [9, 0, 0],
+                    "endTime": [18, 0, 0]
+                },
+                {
+                    "day": "Tuesday",
+                    "startTime": [9, 0, 0],
+                    "endTime": [18, 0, 0]
+                },
+                {
+                    "day": "Wednesday",
+                    "startTime": [9, 0, 0],
+                    "endTime": [17, 0, 0]
+                },
+                {
+                    "day": "Thursday",
+                    "startTime": [9, 0, 0],
+                    "endTime": [17, 0, 0]
+                },
+                {
+                    "day": "Friday",
+                    "startTime": [9, 0, 0],
+                    "endTime": [17, 0, 0]
+                },
+                {
+                    "day": "Saturday",
+                    "startTime": [9, 0, 0],
+                    "endTime": [13, 0, 0]
+                }
+            ]
+        },
+        {
+            "name": "Flint Library",
             "openingTimes": [
                 {
                     "day": "Monday",
@@ -31,12 +66,97 @@
                 {
                     "day": "Tuesday",
                     "startTime": [9, 0, 0],
+                    "endTime": [18, 0, 0]
+                },
+                {
+                    "day": "Wednesday",
+                    "startTime": [9, 0, 0],
+                    "endTime": [17, 0, 0]
+                },
+                {
+                    "day": "Thursday",
+                    "startTime": [9, 0, 0],
+                    "endTime": [18, 0, 0]
+                },
+                {
+                    "day": "Friday",
+                    "startTime": [9, 0, 0],
+                    "endTime": [17, 0, 0]
+                },
+                {
+                    "day": "Saturday",
+                    "startTime": [9, 0, 0],
+                    "endTime": [13, 0, 0]
+                }
+            ]
+        },
+        {
+            "name": "Mold Library",
+            "openingTimes": [
+                {
+                    "day": "Monday",
+                    "startTime": [9, 0, 0],
+                    "endTime": [18, 0, 0]
+                },
+                {
+                    "day": "Tuesday",
+                    "startTime": [9, 0, 0],
                     "endTime": [17, 0, 0]
                 },
                 {
                     "day": "Wednesday",
-                    "startTime": [10, 0, 0],
-                    "endTime": [16, 0, 0]
+                    "startTime": [9, 0, 0],
+                    "endTime": [17, 0, 0]
+                },
+                {
+                    "day": "Thursday",
+                    "startTime": [9, 0, 0],
+                    "endTime": [18, 0, 0]
+                },
+                {
+                    "day": "Friday",
+                    "startTime": [9, 0, 0],
+                    "endTime": [17, 0, 0]
+                },
+                {
+                    "day": "Saturday",
+                    "startTime": [9, 0, 0],
+                    "endTime": [13, 0, 0]
+                }
+            ]
+        },
+        {
+            "name": "Buckley Library",
+            "openingTimes": [
+                {
+                    "day": "Monday",
+                    "startTime": [9, 0, 0],
+                    "endTime": [17, 0, 0]
+                },
+                {
+                    "day": "Tuesday",
+                    "startTime": [9, 0, 0],
+                    "endTime": [18, 0, 0]
+                },
+                {
+                    "day": "Wednesday",
+                    "startTime": [9, 0, 0],
+                    "endTime": [17, 0, 0]
+                },
+                {
+                    "day": "Thursday",
+                    "startTime": [9, 0, 0],
+                    "endTime": [18, 0, 0]
+                },
+                {
+                    "day": "Friday",
+                    "startTime": [9, 0, 0],
+                    "endTime": [17, 0, 0]
+                },
+                {
+                    "day": "Saturday",
+                    "startTime": [9, 0, 0],
+                    "endTime": [13, 0, 0]
                 }
             ]
         }
