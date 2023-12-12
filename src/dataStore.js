@@ -1,6 +1,7 @@
 import { atom } from "nanostores";
 
 export const selectedDay = atom("All");
+export const selectedDays = atom([]);
 export const DAYS = [
     "All",
     "Monday",

@@ -1,8 +1,13 @@
 <script>
     import storeObject from "../data/stores.json";
     import { prettyPrintTime } from "../../code/util";
-    import { selectedDay, DAYS, DAYS_OF_THE_WEEK } from "../dataStore";
-    import { selectedTime } from "../dataStore";
+    import {
+        selectedDay,
+        selectedDays,
+        DAYS,
+        DAYS_OF_THE_WEEK,
+        selectedTime,
+    } from "../dataStore";
     import { timeChecker } from "../../code/checker";
     import DayDisplay from "./DayDisplay.svelte";
     console.log(storeObject.stores.length);
@@ -24,10 +29,10 @@
     // console.log(formattedStores)
     // End of data formatting
 
-    function showDisplayDay(selectedDay, day) {
+    function showDisplayDay(selectedDay, selectedDays, day) {
         if (selectedDay === "All") {
             return true;
-        } else if (day === selectedDay) {
+        } else if (selectedDays.includes(day)) {
             return true;
         }
         return false;
@@ -49,6 +54,7 @@
 </script>
 
 <div>You have picked day: {$selectedDay}</div>
+<div>You have picked day: {$selectedDays}</div>
 <div>You have picked time: {$selectedTime}</div>
 
 {#each storeObject.stores as store}
@@ -56,7 +62,7 @@
     <!-- {#each store.openingTimes as days} -->
     {#each DAYS_OF_THE_WEEK as day}
         {@const thisDay = store.openingTimes.find((x) => x.day === day)}
-        {#if showDisplayDay($selectedDay, day)}
+        {#if showDisplayDay($selectedDay, $selectedDays, day)}
             {#if showTime($selectedTime, thisDay)}
                 <div>
                     <DayDisplay {day} {thisDay} />
