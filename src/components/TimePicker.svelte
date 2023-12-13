@@ -4,12 +4,9 @@
 
 <div>
     <h3>Choose a time</h3>
-    {#each TIMES as time}
-        <input
-            type="radio"
-            id={time}
-            value={time}
-            bind:group={$selectedTime}
-        /><label for={time}>{time}</label>
-    {/each}
+    <select bind:value={$selectedTime}>
+        {#each TIMES as time}
+            <option value={time}>{time} </option>
+        {/each}
+    </select>
 </div>
