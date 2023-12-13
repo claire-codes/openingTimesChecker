@@ -1,7 +1,7 @@
 {
     "stores": [
         {
-            "name": "Asda",
+            "name": "Buckley Library",
             "openingTimes": [
                 {
                     "day": "Monday",
@@ -11,12 +11,27 @@
                 {
                     "day": "Tuesday",
                     "startTime": [9, 0, 0],
-                    "endTime": [17, 0, 0]
+                    "endTime": [18, 0, 0]
                 },
                 {
                     "day": "Wednesday",
-                    "startTime": [10, 0, 0],
-                    "endTime": [16, 0, 0]
+                    "startTime": [9, 0, 0],
+                    "endTime": [17, 0, 0]
+                },
+                {
+                    "day": "Thursday",
+                    "startTime": [9, 0, 0],
+                    "endTime": [18, 0, 0]
+                },
+                {
+                    "day": "Friday",
+                    "startTime": [9, 0, 0],
+                    "endTime": [17, 0, 0]
+                },
+                {
+                    "day": "Saturday",
+                    "startTime": [9, 0, 0],
+                    "endTime": [13, 0, 0]
                 }
             ]
         },
@@ -56,6 +71,41 @@
             ]
         },
         {
+            "name": "Deeside Library",
+            "openingTimes": [
+                {
+                    "day": "Monday",
+                    "startTime": [9, 0, 0],
+                    "endTime": [17, 0, 0]
+                },
+                {
+                    "day": "Tuesday",
+                    "startTime": [9, 0, 0],
+                    "endTime": [17, 0, 0]
+                },
+                {
+                    "day": "Wednesday",
+                    "startTime": [9, 0, 0],
+                    "endTime": [17, 0, 0]
+                },
+                {
+                    "day": "Thursday",
+                    "startTime": [9, 0, 0],
+                    "endTime": [17, 0, 0]
+                },
+                {
+                    "day": "Friday",
+                    "startTime": [9, 0, 0],
+                    "endTime": [17, 0, 0]
+                },
+                {
+                    "day": "Saturday",
+                    "startTime": [9, 0, 0],
+                    "endTime": [13, 30, 0]
+                }
+            ]
+        },
+        {
             "name": "Flint Library",
             "openingTimes": [
                 {
@@ -91,17 +141,17 @@
             ]
         },
         {
-            "name": "Mold Library",
+            "name": "Holywell Library",
             "openingTimes": [
                 {
                     "day": "Monday",
                     "startTime": [9, 0, 0],
-                    "endTime": [18, 0, 0]
+                    "endTime": [17, 0, 0]
                 },
                 {
                     "day": "Tuesday",
                     "startTime": [9, 0, 0],
-                    "endTime": [17, 0, 0]
+                    "endTime": [18, 0, 0]
                 },
                 {
                     "day": "Wednesday",
@@ -111,7 +161,7 @@
                 {
                     "day": "Thursday",
                     "startTime": [9, 0, 0],
-                    "endTime": [18, 0, 0]
+                    "endTime": [17, 0, 0]
                 },
                 {
                     "day": "Friday",
@@ -126,17 +176,17 @@
             ]
         },
         {
-            "name": "Buckley Library",
+            "name": "Mold Library",
             "openingTimes": [
                 {
                     "day": "Monday",
                     "startTime": [9, 0, 0],
-                    "endTime": [17, 0, 0]
+                    "endTime": [18, 0, 0]
                 },
                 {
                     "day": "Tuesday",
                     "startTime": [9, 0, 0],
-                    "endTime": [18, 0, 0]
+                    "endTime": [17, 0, 0]
                 },
                 {
                     "day": "Wednesday",
