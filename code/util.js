@@ -13,4 +13,10 @@ let zeroPad = function (num) {
     // TODO tests for this
 };
 
-export { prettyPrintTime };
+let isArrayOfArrays = function (a) {
+    return a.every(function (x) {
+        return Array.isArray(x);
+    });
+};
+
+export { prettyPrintTime, isArrayOfArrays };

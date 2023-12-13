@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { prettyPrintTime } from "../code/util.js";
+import { prettyPrintTime, isArrayOfArrays } from "../code/util.js";
 
 describe("pretty prints a time", function () {
     it("returns true if a time is between times", function () {
@@ -26,3 +26,16 @@ describe("pretty prints a time", function () {
         // Seconds ones
     });
 });
+
+describe('isArrayOfArrays', () => {
+ it("checks for an array containing arrays", function () {
+        expect(isArrayOfArrays([[]])).to.be.true;
+        expect(isArrayOfArrays([[],[]])).to.be.true;
+        expect(isArrayOfArrays([[1]])).to.be.true;
+        expect(isArrayOfArrays([[1],[2]])).to.be.true;
+        expect(isArrayOfArrays([12, 0])).to.be.false;
+        expect(isArrayOfArrays([])).to.be.false;
+        expect(isArrayOfArrays()).to.be.false;
+        expect(isArrayOfArrays('foo')).to.be.false;
+ });
+})
