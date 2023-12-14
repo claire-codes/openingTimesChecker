@@ -9,9 +9,10 @@
 <div>
     {#if thisDay}
         {#if isArrayOfArrays(thisDay.startTime)}
-            {day}: {#each thisDay.startTime as start, index}{prettyPrintTime(start)} - {prettyPrintTime(
-                thisDay.endTime[index]
-            )}, {/each}
+            {day}: {#each thisDay.startTime as start, index}{prettyPrintTime(
+                    start
+                )} - {prettyPrintTime(thisDay.endTime[index])},
+            {/each}
         {:else}
             {day}: {prettyPrintTime(thisDay.startTime)} - {prettyPrintTime(
                 thisDay.endTime

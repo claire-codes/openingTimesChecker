@@ -1,3 +1,5 @@
+import { isArrayOfArrays } from "./util.js";
+
 let timeChecker = function (
     currentTime = [8, 0],
     startTime = [9, 0],
@@ -21,12 +23,30 @@ let storeOpeningTimeChecker = function (day, time = [0, 0], storeObject) {
     let storeTimes = storeObject.openingTimes;
     if (storeTimes) {
         for (let i = 0; i < storeTimes.length; ++i) {
-            if (storeTimes[i].day === day) {
-                return timeChecker(
-                    time,
-                    storeTimes[i].startTime,
-                    storeTimes[i].endTime
-                );
+            let storeTime = storeTimes[i];
+            if (storeTime.day === day) {
+                if (
+                    isArrayOfArrays(storeTime.startTime) &&
+                    isArrayOfArrays(storeTime.endTime)
+                ) {
+                    let isOpen = false;
+                    for (let j = 0; j < storeTime.startTime.length; ++j) {
+                        isOpen = timeChecker(
+                            time,
+                            storeTime.startTime[j],
+                            storeTime.endTime[j]
+                        );
+                        if (isOpen) {
+                            break;
+                        }
+                    };
+                    return isOpen;
+                } else {
+                    return timeChecker(
+                        time,
+                        storeTimes[i].startTime,
+                        storeTimes[i].endTime
+                    );}
             }
         }
     }

@@ -14,9 +14,14 @@ let zeroPad = function (num) {
 };
 
 let isArrayOfArrays = function (a) {
-    return a.every(function (x) {
-        return Array.isArray(x);
-    });
+    if (Array.isArray(a)) {
+        if (a.length > 0) {
+            return a.every(function (x) {
+                return Array.isArray(x);
+            });
+        }
+    }
+    return false;
 };
 
 export { prettyPrintTime, isArrayOfArrays };

@@ -5,6 +5,7 @@ import {
     whichStoresAreOpen,
 } from "../code/checker.js";
 import storeObject from "./data/storeTimes.json" assert { type: "json" };
+import storeWithMultipleTimes from "./data/storeWithMultipleTimes.json" assert { type: "json" };
 import storesObject from "./data/stores.json" assert { type: "json" };
 
 describe("Time Checker", function () {
@@ -69,6 +70,16 @@ describe("storeOpeningTimeChecker", function () {
                 .to.be.false;
         });
     });
+
+    describe("checking a store with multiple open and closed periods per day", function(){
+        it("says the store is open", function() {
+            expect(storeOpeningTimeChecker("Monday", [1,45], storeWithMultipleTimes)).to.be.false;
+            expect(storeOpeningTimeChecker("Monday", [9,15], storeWithMultipleTimes)).to.be.true;
+            expect(storeOpeningTimeChecker("Monday", [12,30], storeWithMultipleTimes)).to.be.false;
+            expect(storeOpeningTimeChecker("Monday", [13,45], storeWithMultipleTimes)).to.be.true;
+            expect(storeOpeningTimeChecker("Monday", [17,2], storeWithMultipleTimes)).to.be.false;
+        })
+    })
 
     describe("checking multiple stores and finding which ones are open", function () {
         it("returns an array of stores", function () {

@@ -1,6 +1,48 @@
 {
     "stores": [
         {
+            "name": "Broughton Library",
+            "openingTimes": [
+                {
+                    "day": "Monday",
+                    "startTime": [
+                        [9, 0, 0],
+                        [14, 0]
+                    ],
+                    "endTime": [
+                        [13, 0],
+                        [17, 0, 0]
+                    ]
+                },
+                {
+                    "day": "Wednesday",
+                    "startTime": [
+                        [9, 0, 0],
+                        [14, 0]
+                    ],
+                    "endTime": [
+                        [13, 0],
+                        [17, 0, 0]
+                    ]
+                },
+                {
+                    "day": "Thursday",
+                    "startTime": [14, 0, 0],
+                    "endTime": [18, 0, 0]
+                },
+                {
+                    "day": "Friday",
+                    "startTime": [14, 0, 0],
+                    "endTime": [17, 0, 0]
+                },
+                {
+                    "day": "Saturday",
+                    "startTime": [9, 0, 0],
+                    "endTime": [13, 0, 0]
+                }
+            ]
+        },
+        {
             "name": "Buckley Library",
             "openingTimes": [
                 {
