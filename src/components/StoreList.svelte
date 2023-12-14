@@ -1,6 +1,6 @@
 <script>
     import storeObject from "../data/stores.json";
-    import { prettyPrintTime } from "../../code/util";
+    import { prettyPrintTime, isArrayOfArrays } from "../../code/util";
     import {
         selectedDay,
         selectedDays,
@@ -38,15 +38,41 @@
         return false;
     }
 
+    function thisIsStupid(selectedTime, thisDay) {
+        if (
+            isArrayOfArrays(thisDay.startTime) &&
+            isArrayOfArrays(thisDay.endTime)
+        ) {
+            let isOpen = false;
+            for (let j = 0; j < thisDay.startTime.length; ++j) {
+                isOpen = timeChecker(
+                    [selectedTime, 0],
+                    thisDay.startTime[j],
+                    thisDay.endTime[j]
+                );
+                if (isOpen) {
+                    break;
+                }
+            }
+            return isOpen;
+        } else {
+            return timeChecker(
+                [selectedTime, 0],
+                thisDay.startTime,
+                thisDay.endTime
+            );
+        }
+    }
+
     function showTime(selectedTime, thisDay) {
+        if (thisDay)
+            console.log([selectedTime, 0], thisDay.startTime, thisDay.endTime);
         if (selectedTime === "All") {
             return true;
         } else if (!thisDay) {
             // want to refactor this when data is better
             return false;
-        } else if (
-            timeChecker([selectedTime, 0], thisDay.startTime, thisDay.endTime)
-        ) {
+        } else if (thisIsStupid(selectedTime, thisDay)) {
             return true;
         }
         return false;

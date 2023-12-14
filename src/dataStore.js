@@ -23,6 +23,17 @@ export const DAYS_OF_THE_WEEK = [
 ];
 
 export const selectedTime = atom("All");
-export const TIMES = ["All", "8", "9", "10", "11", "12", "13", "18"];
-
-// Store object of stores here (or import JSON in)
+export const TIMES = [
+    "All",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+];

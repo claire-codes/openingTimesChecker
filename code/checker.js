@@ -39,14 +39,15 @@ let storeOpeningTimeChecker = function (day, time = [0, 0], storeObject) {
                         if (isOpen) {
                             break;
                         }
-                    };
+                    }
                     return isOpen;
                 } else {
                     return timeChecker(
                         time,
                         storeTimes[i].startTime,
                         storeTimes[i].endTime
-                    );}
+                    );
+                }
             }
         }
     }
