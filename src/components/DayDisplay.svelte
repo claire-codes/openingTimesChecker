@@ -6,19 +6,25 @@
 </script>
 
 <!-- // TODO: Remove logic from here, no if, just display -->
-<div>
     {#if thisDay}
         {#if isArrayOfArrays(thisDay.startTime)}
-            {day}: {#each thisDay.startTime as start, index}{prettyPrintTime(
-                    start
-                )} - {prettyPrintTime(thisDay.endTime[index])},
-            {/each}
+            <div class="day">{day}:</div>
+            <div class="times">
+                {#each thisDay.startTime as start, index}
+                    {prettyPrintTime(start)} - {prettyPrintTime(
+                        thisDay.endTime[index]
+                    )},
+                {/each}
+            </div>
         {:else}
-            {day}: {prettyPrintTime(thisDay.startTime)} - {prettyPrintTime(
-                thisDay.endTime
-            )}
+            <div class="day">{day}:</div>
+            <div class="times">
+                {prettyPrintTime(thisDay.startTime)} - {prettyPrintTime(
+                    thisDay.endTime
+                )}
+            </div>
         {/if}
     {:else if day !== "All"}
-        {day}: CLOSED
+        <div class="day">{day}:</div>
+        <div class="times">CLOSED</div>
     {/if}
-</div>

@@ -65,8 +65,6 @@
     }
 
     function showTime(selectedTime, thisDay) {
-        if (thisDay)
-            console.log([selectedTime, 0], thisDay.startTime, thisDay.endTime);
         if (selectedTime === "All") {
             return true;
         } else if (!thisDay) {
@@ -86,14 +84,21 @@
 {#each storeObject.stores as store}
     <h2>{store.name}</h2>
     <!-- {#each store.openingTimes as days} -->
-    {#each DAYS_OF_THE_WEEK as day}
-        {@const thisDay = store.openingTimes.find((x) => x.day === day)}
-        {#if showDisplayDay($selectedDay, $selectedDays, day)}
-            {#if showTime($selectedTime, thisDay)}
-                <div>
+    <div class="day-container">
+        {#each DAYS_OF_THE_WEEK as day}
+            {@const thisDay = store.openingTimes.find((x) => x.day === day)}
+            {#if showDisplayDay($selectedDay, $selectedDays, day)}
+                {#if showTime($selectedTime, thisDay)}
                     <DayDisplay {day} {thisDay} />
-                </div>
+                {/if}
             {/if}
-        {/if}
-    {/each}
+        {/each}
+    </div>
 {/each}
+
+<style>
+    .day-container {
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+</style>
