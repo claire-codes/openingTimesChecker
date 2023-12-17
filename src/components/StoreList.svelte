@@ -81,24 +81,39 @@
 <div>You have picked day: {$selectedDays}</div>
 <div>You have picked time: {$selectedTime}</div>
 
-{#each storeObject.stores as store}
-    <h2>{store.name}</h2>
-    <!-- {#each store.openingTimes as days} -->
-    <div class="day-container">
-        {#each DAYS_OF_THE_WEEK as day}
-            {@const thisDay = store.openingTimes.find((x) => x.day === day)}
-            {#if showDisplayDay($selectedDay, $selectedDays, day)}
-                {#if showTime($selectedTime, thisDay)}
-                    <DayDisplay {day} {thisDay} />
-                {/if}
-            {/if}
-        {/each}
-    </div>
-{/each}
+<div class="store-grid">
+    {#each storeObject.stores as store}
+        <div class="store-container">
+            <h2>{store.name}</h2>
+            <!-- {#each store.openingTimes as days} -->
+            <div class="day-container">
+                {#each DAYS_OF_THE_WEEK as day}
+                    {@const thisDay = store.openingTimes.find(
+                        (x) => x.day === day
+                    )}
+                    {#if showDisplayDay($selectedDay, $selectedDays, day)}
+                        {#if showTime($selectedTime, thisDay)}
+                            <DayDisplay {day} {thisDay} />
+                        {/if}
+                    {/if}
+                {/each}
+            </div>
+        </div>
+    {/each}
+</div>
 
 <style>
     .day-container {
         display: grid;
         grid-template-columns: auto 1fr;
+    }
+    .store-container {
+        border: 1px solid black;
+        padding: 12px;
+    }
+    .store-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+        gap: 2rem;
     }
 </style>
