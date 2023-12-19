@@ -1,5 +1,5 @@
 <script>
-    import { selectedTime, TIMES } from "../dataStore";
+    import { selectedTime, TIMES } from "../nanostores/dataStore";
 </script>
 
 <div>

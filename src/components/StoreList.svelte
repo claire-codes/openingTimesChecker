@@ -7,10 +7,11 @@
         DAYS,
         DAYS_OF_THE_WEEK,
         selectedTime,
-    } from "../dataStore";
+    } from "../nanostores/dataStore";
     import { timeChecker } from "../../code/checker";
     import DayDisplay from "./DayDisplay.svelte";
-    console.log(storeObject.stores.length);
+
+    // Work out how to edit the stores data with filters
 
     // Data formatting stuff, probably better somewhere else
     // let formattedStores = storeObject.stores.each((store) => {

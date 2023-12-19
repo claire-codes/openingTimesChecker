@@ -1,5 +1,5 @@
 <script>
-    import { selectedDay, selectedDays, DAYS_OF_THE_WEEK } from "../dataStore";
+    import { selectedDay, selectedDays, DAYS_OF_THE_WEEK } from "../nanostores/dataStore";
 </script>
 
 <div>
