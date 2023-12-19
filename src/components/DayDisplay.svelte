@@ -11,9 +11,10 @@
         <div class="day">{day}:&nbsp;</div>
         <div class="times">
             {#each thisDay.startTime as start, index}
-                {prettyPrintTime(start)} - {prettyPrintTime(
+                {#if index > 0},
+                {/if}{prettyPrintTime(start)} - {prettyPrintTime(
                     thisDay.endTime[index]
-                )},
+                )}
             {/each}
         </div>
     {:else}
