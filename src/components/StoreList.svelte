@@ -107,14 +107,18 @@
     .day-container {
         display: grid;
         grid-template-columns: auto 1fr;
+        gap: 12px;
     }
     .store-container {
         border: 1px solid black;
         padding: 12px;
+        display: grid;
+        grid-template-rows: 1fr auto;
+        gap: 12px;
     }
     .store-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
         gap: 2rem;
     }
 </style>
