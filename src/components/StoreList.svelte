@@ -10,6 +10,7 @@
     } from "../nanostores/dataStore";
     import { timeChecker } from "../../code/checker";
     import DayDisplay from "./DayDisplay.svelte";
+    import { one, two, sum } from "../svelteStore/dataStore";
 
     // Work out how to edit the stores data with filters
 
@@ -81,6 +82,10 @@
 <div>You have picked day: {$selectedDay}</div>
 <div>You have picked day: {$selectedDays}</div>
 <div>You have picked time: {$selectedTime}</div>
+
+<input type="number" bind:value={$one} />
+<input type="number" bind:value={$two} />
+<div>{$sum}</div>
 
 <div class="store-grid">
     {#each storeObject.stores as store}
