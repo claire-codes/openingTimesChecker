@@ -1,5 +1,5 @@
 <script>
-    import { selectedDay, DAYS } from "../nanostores/dataStore";
+    import { selectedDay } from "../nanostores/dataStore";
     export let day;
     export let thisDay;
     import { prettyPrintTime, isArrayOfArrays } from "../../code/util";

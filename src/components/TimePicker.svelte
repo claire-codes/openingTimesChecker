@@ -1,5 +1,6 @@
 <script>
-    import { selectedTime, TIMES } from "../nanostores/dataStore";
+    import { selectedTime } from "../nanostores/dataStore";
+    import { TIMES } from "../svelteStore/dataStore";
 </script>
 
 <div>

@@ -4,13 +4,11 @@
     import {
         selectedDay,
         selectedDays,
-        DAYS,
-        DAYS_OF_THE_WEEK,
         selectedTime,
     } from "../nanostores/dataStore";
     import { timeChecker } from "../../code/checker";
     import DayDisplay from "./DayDisplay.svelte";
-    import { one, two, sum } from "../svelteStore/dataStore";
+    import { one, two, DAYS_OF_THE_WEEK, sum } from "../svelteStore/dataStore";
 
     // Work out how to edit the stores data with filters
 

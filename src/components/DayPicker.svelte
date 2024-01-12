@@ -1,5 +1,6 @@
 <script>
-    import { selectedDay, selectedDays, DAYS_OF_THE_WEEK } from "../nanostores/dataStore";
+    import { selectedDay, selectedDays } from "../nanostores/dataStore";
+    import { DAYS_OF_THE_WEEK } from "../svelteStore/dataStore";
 </script>
 
 <div>
