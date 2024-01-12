@@ -1,4 +1,7 @@
 import { writable, derived } from "svelte/store";
+import allStores from "../data/stores.json";
+
+export const storeObject = writable(allStores);
 
 export const two = writable(2);
 
@@ -34,3 +37,6 @@ export const TIMES = [
 export const selectedTime = writable("All");
 export const selectedDay = writable("All");
 export const selectedDays = writable([]);
+export const storesWithDays = derived(selectedDay, ($selectedDay) => {
+    return $selectedDay === "All" ? "all is selected" : "Other is selected"
+})

@@ -1,5 +1,4 @@
 <script>
-    import storeObject from "../data/stores.json";
     import { prettyPrintTime, isArrayOfArrays } from "../../code/util";
     import { timeChecker } from "../../code/checker";
     import DayDisplay from "./DayDisplay.svelte";
@@ -11,6 +10,8 @@
         selectedTime,
         selectedDay,
         selectedDays,
+        storeObject,
+        storesWithDays
     } from "../svelteStore/dataStore";
 
     // Work out how to edit the stores data with filters
@@ -78,6 +79,7 @@
         }
         return false;
     }
+    $: console.log($storeObject)
 </script>
 
 <div>You have picked day: {$selectedDay}</div>
@@ -88,8 +90,10 @@
 <input type="number" bind:value={$two} />
 <div>{$sum}</div>
 
+<div>{$storesWithDays}</div>
+
 <div class="store-grid">
-    {#each storeObject.stores as store}
+    {#each $storeObject.stores as store}
         <div class="store-container">
             <h2>{store.name}</h2>
             <!-- {#each store.openingTimes as days} -->
