@@ -1,7 +1,7 @@
 import { writable, derived } from "svelte/store";
-import allStores from "../data/stores.json";
+import allLibraries from "../data/libraries.json";
 
-export const storeObject = writable(allStores);
+export const libraryObject = writable(allLibraries);
 
 export const two = writable(2);
 

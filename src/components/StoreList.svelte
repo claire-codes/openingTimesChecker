@@ -10,14 +10,14 @@
         selectedTime,
         selectedDay,
         selectedDays,
-        storeObject,
+        libraryObject,
         storesWithDays
     } from "../svelteStore/dataStore";
 
     // Work out how to edit the stores data with filters
 
     // Data formatting stuff, probably better somewhere else
-    // let formattedStores = storeObject.stores.each((store) => {
+    // let formattedStores = libraryObject.stores.each((store) => {
     //     let tmpOpeningTimes = DAYS_OF_THE_WEEK.each((day) => {
     //         if (store.openingTimes.find((value) => value.day === day)) {
     //             return {...store.openingTimes, message: "Open"}
@@ -79,7 +79,7 @@
         }
         return false;
     }
-    $: console.log($storeObject)
+    $: console.log($libraryObject)
 </script>
 
 <div>You have picked day: {$selectedDay}</div>
@@ -93,13 +93,13 @@
 <div>{$storesWithDays}</div>
 
 <div class="store-grid">
-    {#each $storeObject.stores as store}
+    {#each $libraryObject.stores as library}
         <div class="store-container">
-            <h2>{store.name}</h2>
-            <!-- {#each store.openingTimes as days} -->
+            <h2>{library.name}</h2>
+            <!-- {#each library.openingTimes as days} -->
             <div class="day-container">
                 {#each DAYS_OF_THE_WEEK as day}
-                    {@const thisDay = store.openingTimes.find(
+                    {@const thisDay = library.openingTimes.find(
                         (x) => x.day === day
                     )}
                     {#if showDisplayDay($selectedDay, $selectedDays, day)}
