@@ -1,4 +1,4 @@
-import { writable, derived } from 'svelte/store'
+import { writable, derived } from "svelte/store";
 
 export const two = writable(2);
 
@@ -30,3 +30,7 @@ export const TIMES = [
     "17",
     "18",
 ];
+
+export const selectedTime = writable("All");
+export const selectedDay = writable("All");
+export const selectedDays = writable([]);
